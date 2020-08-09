@@ -1,0 +1,1232 @@
+@charset "UTF-8";
+/*
+ * CSS Fadeshow by @alexerlandsson
+ * This is a fadeshow built in CSS and with customization in focus.
+ * Supports quick navigation, prev/next navigation and autoplay.
+ * 
+ * For better documentation and implementation guide, check out the GitHub repository:
+ * https://github.com/alexerlandsson/css-fadeshow
+*/
+/*
+ * ===== VARIABLES =====
+ *
+ * Change these variables to match your preferences. For a more detailed
+ * description of what each variable do, visit https://github.com/alexerlandsson/css-fadeshow
+ */
+/*
+  * ===== MIXINS =====
+  *
+  * This section contains mixin used
+  * Do not change anything here unless you know what you are doing.
+  */
+/* Mixins to handle prefixes */
+/* Mixins to handle Quick Navigation Button states */
+/*
+  * ===== FADESHOW =====
+  *
+  * Base functionality for the fadeshow.
+  * Do not change anything here unless you know what you are doing.
+  */
+[people-data-am-fadeshow] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  /* Slides */
+  /* Quick Navigation */
+  /* Prev/Next Navigation */
+  /* Base functionality */
+  /* Autohide Prev/Next Navigation */
+}
+
+[people-data-am-fadeshow] .people-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 800ms ease;
+  /* Display first child on load */
+}
+
+[people-data-am-fadeshow] .people-slide:first-child {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] .fs-quick-nav {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+[people-data-am-fadeshow] .people-quick-btn {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Set active state to first button on load */
+}
+
+[people-data-am-fadeshow] .people-quick-btn:hover {
+  opacity: 0.8;
+}
+
+[people-data-am-fadeshow] .people-quick-btn:first-child {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] .people-prev-btn, [people-data-am-fadeshow] .people-next-btn {
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  cursor: pointer;
+  font-family: sans-serif;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+@media (max-width: 500px) {
+  [people-data-am-fadeshow] .people-prev-btn, [people-data-am-fadeshow] .people-next-btn {
+    width: 10%;
+  }
+}
+
+[people-data-am-fadeshow] .people-prev-btn:before, [people-data-am-fadeshow] .people-next-btn:before {
+  position: absolute;
+  top: 50%;
+  font-size: 3vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+[people-data-am-fadeshow] .people-prev-btn:hover, [people-data-am-fadeshow] .people-next-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 500px) {
+  [people-data-am-fadeshow] .people-prev-btn:hover, [people-data-am-fadeshow] .people-next-btn:hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+[people-data-am-fadeshow] .people-prev-btn {
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+[people-data-am-fadeshow] .people-prev-btn:before {
+  content: "❮";
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 500px) {
+  [people-data-am-fadeshow] .people-prev-btn:before {
+    left: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  [people-data-am-fadeshow] .people-prev-btn {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+[people-data-am-fadeshow] .people-next-btn {
+  right: 0;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+[people-data-am-fadeshow] .people-next-btn:before {
+  content: "❯";
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+}
+
+@media (max-width: 500px) {
+  [people-data-am-fadeshow] .people-next-btn:before {
+    right: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  [people-data-am-fadeshow] .people-next-btn {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+[people-data-am-fadeshow] input[type="radio"] {
+  position: fixed;
+  top: -9999px;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked {
+  /* This loop handles the slide switching and quick navigation active state */
+  /* Hide navigation if only one slide */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(10) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(10) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(10) ~ .people-slides .people-slide:nth-child(10) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(10) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(10) ~ .fs-quick-nav .people-quick-btn:nth-child(10) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(10) ~ .fs-quick-nav .people-quick-btn:nth-child(10):hover {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(9) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(9) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(9) ~ .people-slides .people-slide:nth-child(9) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(9) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(9) ~ .fs-quick-nav .people-quick-btn:nth-child(9) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(9) ~ .fs-quick-nav .people-quick-btn:nth-child(9):hover {
+  opacity: 1;
+}
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(8) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(8) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(8) ~ .people-slides .people-slide:nth-child(8) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(8) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(8) ~ .fs-quick-nav .people-quick-btn:nth-child(8) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(8) ~ .fs-quick-nav .people-quick-btn:nth-child(8):hover {
+  opacity: 1;
+}
+
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(7) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(7) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(7) ~ .people-slides .people-slide:nth-child(7) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(7) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(7) ~ .fs-quick-nav .people-quick-btn:nth-child(7) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(7) ~ .fs-quick-nav .people-quick-btn:nth-child(7):hover {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(6) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(6) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(6) ~ .people-slides .people-slide:nth-child(6) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(6) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(6) ~ .fs-quick-nav .people-quick-btn:nth-child(6) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(6) ~ .fs-quick-nav .people-quick-btn:nth-child(6):hover {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(5) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(5) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(5) ~ .people-slides .people-slide:nth-child(5) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(5) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(5) ~ .fs-quick-nav .people-quick-btn:nth-child(5) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(5) ~ .fs-quick-nav .people-quick-btn:nth-child(5):hover {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(4) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(4) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(4) ~ .people-slides .people-slide:nth-child(4) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(4) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(4) ~ .fs-quick-nav .people-quick-btn:nth-child(4) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(4) ~ .fs-quick-nav .people-quick-btn:nth-child(4):hover {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(3) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(3) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(3) ~ .people-slides .people-slide:nth-child(3) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(3) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(3) ~ .fs-quick-nav .people-quick-btn:nth-child(3) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(3) ~ .fs-quick-nav .people-quick-btn:nth-child(3):hover {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(2) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(2) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(2) ~ .people-slides .people-slide:nth-child(2) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(2) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(2) ~ .fs-quick-nav .people-quick-btn:nth-child(2) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(2) ~ .fs-quick-nav .people-quick-btn:nth-child(2):hover {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(1) {
+  /* Show slide */
+  /* Add active state to dot */
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(1) ~ .people-slides .people-slide {
+  opacity: 0;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(1) ~ .people-slides .people-slide:nth-child(1) {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(1) ~ .fs-quick-nav .people-quick-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Cancel autoplay */
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(1) ~ .fs-quick-nav .people-quick-btn:nth-child(1) {
+  background-color: #123320;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:nth-of-type(1) ~ .fs-quick-nav .people-quick-btn:nth-child(1):hover {
+  opacity: 1;
+}
+
+[people-data-am-fadeshow] input[type="radio"]:checked:first-of-type:last-of-type ~ .fs-quick-nav,
+[people-data-am-fadeshow] input[type="radio"]:checked:first-of-type:last-of-type ~ .fs-prev-nav,
+[people-data-am-fadeshow] input[type="radio"]:checked:first-of-type:last-of-type ~ .fs-next-nav {
+  display: none !important;
+}
+
+[people-data-am-fadeshow]:hover .people-prev-btn,
+[people-data-am-fadeshow]:hover .people-next-btn {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/*
+  * ===== PREV/NEXT NAVIGATION =====
+  *
+  * This section handles the prev/next navigation.
+  */
+/* Handle Prev/Next buttons */
+[people-data-am-fadeshow~="next-prev-navigation"] {
+  /* Display first pair of Prev/Next Buttons on load */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(10) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(10) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(10) ~ .fs-prev-nav .people-prev-btn:nth-child(9) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(10) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(10) ~ .fs-next-nav .people-next-btn:nth-child(10) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(10):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(10):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(9) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(9) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(9) ~ .fs-prev-nav .people-prev-btn:nth-child(8) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(9) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(9) ~ .fs-next-nav .people-next-btn:nth-child(10) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(9):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(9):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(8) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(8) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(8) ~ .fs-prev-nav .people-prev-btn:nth-child(7) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(8) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(8) ~ .fs-next-nav .people-next-btn:nth-child(9) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(8):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(8):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(7) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(7) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(7) ~ .fs-prev-nav .people-prev-btn:nth-child(6) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(7) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(7) ~ .fs-next-nav .people-next-btn:nth-child(8) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(7):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(7):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(6) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(6) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(6) ~ .fs-prev-nav .people-prev-btn:nth-child(5) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(6) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(6) ~ .fs-next-nav .people-next-btn:nth-child(7) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(6):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(6):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(5) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(5) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(5) ~ .fs-prev-nav .people-prev-btn:nth-child(4) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(5) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(5) ~ .fs-next-nav .people-next-btn:nth-child(6) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(5):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(5):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(4) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(4) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(4) ~ .fs-prev-nav .people-prev-btn:nth-child(3) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(4) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(4) ~ .fs-next-nav .people-next-btn:nth-child(5) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(4):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(4):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(3) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(3) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(3) ~ .fs-prev-nav .people-prev-btn:nth-child(2) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(3) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(3) ~ .fs-next-nav .people-next-btn:nth-child(4) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(3):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(3):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(2) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(2) ~ .fs-prev-nav .people-prev-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(2) ~ .fs-prev-nav .people-prev-btn:nth-child(1) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(2) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(2) ~ .fs-next-nav .people-next-btn:nth-child(3) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(2):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(2):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(1) {
+  /* Show previous button */
+  /* Show next button */
+  /* Show last prev button if first slide */
+  /* Show first next button if last slide */
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(1) ~ .fs-next-nav .people-next-btn {
+  display: none;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(1) ~ .fs-next-nav .people-next-btn:nth-child(2) {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(1):first-of-type ~ .fs-prev-nav .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] input[type="radio"]:checked:nth-of-type(1):last-of-type ~ .fs-next-nav .people-next-btn:first-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] .people-prev-btn:last-child {
+  display: block;
+}
+
+[people-data-am-fadeshow~="next-prev-navigation"] .people-next-btn:nth-child(2) {
+  display: block;
+}
+
+/*
+  * ===== AUTOPLAY =====
+  *
+  * Functions to handle autoplay.
+  * If you're not going to use autoplay, set $autoplay to false.
+  * This part tends to compile into a lot of uneccesary CSS otherwise.
+  */
+  @keyframes quickNavAnimation-5 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    4%,
+    20% {
+      background-color: coral;
+    }
+    24%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @-webkit-keyframes quickNavAnimation-5 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    4%,
+    20% {
+      background-color: coral;
+    }
+    24%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @keyframes slidesAnimation-5 {
+    0% {
+      opacity: 0;
+    }
+    4%,
+    20% {
+      opacity: 1;
+    }
+    24%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slidesAnimation-5 {
+    0% {
+      opacity: 0;
+    }
+    4%,
+    20% {
+      opacity: 1;
+    }
+    24%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type {
+    /* Slide animation */
+    /* Quick navigation animation */
+    /* Animation Delay */
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .people-slides .people-slide {
+    -webkit-animation: slidesAnimation-5 25s infinite;
+    animation: slidesAnimation-5 25s infinite;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .people-quick-btn {
+    -webkit-animation: quickNavAnimation-5 25s infinite;
+    animation: quickNavAnimation-5 25s infinite;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .people-slides .people-slide:nth-child(1),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(1) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .people-slides .people-slide:nth-child(2),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .people-slides .people-slide:nth-child(3),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(3) {
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .people-slides .people-slide:nth-child(4),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(4) {
+    -webkit-animation-delay: 14s;
+    animation-delay: 14s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .people-slides .people-slide:nth-child(5),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(5) {
+    -webkit-animation-delay: 19s;
+    animation-delay: 19s;
+  }
+  
+  @keyframes quickNavAnimation-4 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    5%,
+    25% {
+      background-color: coral;
+    }
+    30%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @-webkit-keyframes quickNavAnimation-4 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    5%,
+    25% {
+      background-color: coral;
+    }
+    30%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @keyframes slidesAnimation-4 {
+    0% {
+      opacity: 0;
+    }
+    5%,
+    25% {
+      opacity: 1;
+    }
+    30%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slidesAnimation-4 {
+    0% {
+      opacity: 0;
+    }
+    5%,
+    25% {
+      opacity: 1;
+    }
+    30%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type {
+    /* Slide animation */
+    /* Quick navigation animation */
+    /* Animation Delay */
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .people-slides .people-slide {
+    -webkit-animation: slidesAnimation-4 20s infinite;
+    animation: slidesAnimation-4 20s infinite;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .people-quick-btn {
+    -webkit-animation: quickNavAnimation-4 20s infinite;
+    animation: quickNavAnimation-4 20s infinite;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .people-slides .people-slide:nth-child(1),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(1) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .people-slides .people-slide:nth-child(2),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .people-slides .people-slide:nth-child(3),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(3) {
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .people-slides .people-slide:nth-child(4),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(4) {
+    -webkit-animation-delay: 14s;
+    animation-delay: 14s;
+  }
+  
+  @keyframes quickNavAnimation-3 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    6.66667%,
+    33.33333% {
+      background-color: coral;
+    }
+    40%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @-webkit-keyframes quickNavAnimation-3 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    6.66667%,
+    33.33333% {
+      background-color: coral;
+    }
+    40%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @keyframes slidesAnimation-3 {
+    0% {
+      opacity: 0;
+    }
+    6.66667%,
+    33.33333% {
+      opacity: 1;
+    }
+    40%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slidesAnimation-3 {
+    0% {
+      opacity: 0;
+    }
+    6.66667%,
+    33.33333% {
+      opacity: 1;
+    }
+    40%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type {
+    /* Slide animation */
+    /* Quick navigation animation */
+    /* Animation Delay */
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type ~ .people-slides .people-slide {
+    -webkit-animation: slidesAnimation-3 15s infinite;
+    animation: slidesAnimation-3 15s infinite;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type ~ .fs-quick-nav .people-quick-btn {
+    -webkit-animation: quickNavAnimation-3 15s infinite;
+    animation: quickNavAnimation-3 15s infinite;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type ~ .people-slides .people-slide:nth-child(1),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(1) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type ~ .people-slides .people-slide:nth-child(2),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type ~ .people-slides .people-slide:nth-child(3),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(3) {
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
+  }
+  
+  @keyframes quickNavAnimation-2 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    10%,
+    50% {
+      background-color: coral;
+    }
+    60%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @-webkit-keyframes quickNavAnimation-2 {
+    0% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    10%,
+    50% {
+      background-color: coral;
+    }
+    60%,
+    100% {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @keyframes slidesAnimation-2 {
+    0% {
+      opacity: 0;
+    }
+    10%,
+    50% {
+      opacity: 1;
+    }
+    60%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slidesAnimation-2 {
+    0% {
+      opacity: 0;
+    }
+    10%,
+    50% {
+      opacity: 1;
+    }
+    60%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(2):last-of-type {
+    /* Slide animation */
+    /* Quick navigation animation */
+    /* Animation Delay */
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(2):last-of-type ~ .people-slides .people-slide {
+    -webkit-animation: slidesAnimation-2 10s infinite;
+    animation: slidesAnimation-2 10s infinite;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(2):last-of-type ~ .fs-quick-nav .people-quick-btn {
+    -webkit-animation: quickNavAnimation-2 10s infinite;
+    animation: quickNavAnimation-2 10s infinite;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(2):last-of-type ~ .people-slides .people-slide:nth-child(1),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(2):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(1) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+  }
+  
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(2):last-of-type ~ .people-slides .people-slide:nth-child(2),
+  [people-data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(2):last-of-type ~ .fs-quick-nav .people-quick-btn:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+  
+  /* Base Styling
+  body {
+    margin: 0;
+  }
+  
+  .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  } */
+
+.slideContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+/*# sourceMappingURL=sliderStyle.css.map */

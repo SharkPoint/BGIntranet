@@ -1,0 +1,172 @@
+/* 
+    Document   : slider.css
+    Author     : jackh
+    Description:
+        Standard template.
+*/
+
+/* Import base css*/
+@import url("slider_base.css");
+
+/*----------------------------------*/
+/*Slider related css (override)     */
+/*----------------------------------*/
+
+.xpro-slider-container {
+
+}
+
+.xpro-slider-item {
+    background-size:cover;
+    background-position:50% 50%;
+    background-color: #000000;
+}
+
+.xpro-slider-nav-selected {
+    background-color: transparent !important;
+}
+
+.xpro-thumb-item {
+    background-image: url(images/bullet-l.png);
+}
+
+.xpro-video-play {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: #f0f0f0 2px solid;
+}
+
+.xpro-video-play:hover {
+    background-color: rgba(70,205,200,0.8);
+}
+
+.xpro-video-frame {
+    display: inline-block;
+    border: #ffffff 1px solid;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+.xpro-video-item {
+    display: inline-block; 
+    border: #b8b8b8 1px solid;
+    /*box-shadow: 0px 0px 10px #000000;*/
+}
+
+/*----------------------------------*/
+/* Content related */
+/*----------------------------------*/
+
+.xp-headtext {
+    color:#ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: Raleway, sans-serif;
+}
+
+.xp-headsubtext {
+    color:#ffffff;
+    font-style: normal;
+    font-family: Raleway, sans-serif;
+    font-weight: 200;
+}
+
+.xp-headdetailtext {
+    color:#ffffff;
+    font-style: normal;
+    font-family: Raleway, sans-serif;
+    font-weight: 200;
+}
+
+#button1, #button2, #button3, .xp-hero-round-button {
+    border-radius: 30px;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    
+    background-color: #000000;   
+    color: #ffffff;
+    text-decoration: none;
+    
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    -o-transition: all 0.4s;    
+}
+
+#button1:hover, #button2:hover, #button3:hover, .xp-hero-round-button:hover, .xp-hero-circle-button:hover {
+    background-color: #ffffff;
+    color: black;
+    text-decoration: none;
+}
+
+/* .xp-hero-circle-button {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    padding: 0px;
+    padding-top: 8px;
+    padding-left: 2px;
+    background-color: transparent;
+    border: #ffffff 1px solid;
+    color:white;
+} */
+
+.nextButton {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    padding: 0px;
+    padding-top: 8px;
+    padding-left: 2px;
+    background-color: transparent;
+    border: #ffffff 1px solid;
+    color:white;
+}
+
+.nextButton:hover {
+    background-color: #ffffff;
+    color: black;
+    text-decoration: none;
+}
+
+.xp-hero-flight-blue {
+    background-color: rgba(76, 127, 139, 0.7) !important;
+}
+
+.xp-hero-flight-blue:hover {
+    background-color: #5094b0 !important;
+    color: #ffffff;
+}
+
+.xp-sosmed-buttons {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    -o-transition: all 0.6s;     
+}
+
+
+.xp-sosmed-buttons a {
+    margin: 3px 5px;
+    color: inherit;
+}
+
+/* #arrow1, #arrow2, #arrow3 {
+    color:white;
+}
+
+#arrow1:hover {
+    color:black;
+} */

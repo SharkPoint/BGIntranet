@@ -1,0 +1,1242 @@
+.evendar-input-wrapper {
+  display: inline-block;
+}
+
+.evendar-input-wrapper .evendar-button {
+  background: ghostwhite;
+  border: 1px solid #6bb796;
+  border-radius: 4px;
+  padding: 6px 12px;
+  padding-right: 36px;
+  -webkit-box-shadow: 0px 2px 2px -1px #ddd;
+          box-shadow: 0px 2px 2px -1px #ddd;
+  position: relative;
+  outline: none;
+}
+
+.evendar-input-wrapper .evendar-button:before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  pointer-events: none;
+  position: absolute;
+  padding: 0px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-left: 1px solid #6bb796;
+  width: 21px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.evendar-input-wrapper .evendar-button:focus, .evendar-input-wrapper .evendar-button:active {
+  outline: none;
+}
+
+.evendar-input-wrapper .evendar-button:hover {
+  background: #e8e8ff;
+}
+
+.evendar-input-wrapper .evendar-button.evendar-active {
+  background: white;
+}
+
+.evendar-input-wrapper .evendar-button.evendar-active:before {
+  content: "\f0d7";
+}
+
+.evendar-container, .evendar-container-mobile {
+  font-size: 15px;
+  float: left;
+  font-family: "Gotham-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 9999;
+}
+
+.evendar-container:focus, .evendar-container-mobile:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.evendar-container .evendar-eventlist p, .evendar-container-mobile .evendar-eventlist p {
+  color: initial;
+}
+
+.evendar-container .evendar-input, .evendar-container-mobile .evendar-input {
+  margin: 5px;
+  border: 1px solid #6bb796;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #6bb796;
+  -webkit-box-shadow: 0px 0px 13px -5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 13px -5px rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.evendar-container .evendar-input.evendar-maximized-events .evendar-calendars, .evendar-container-mobile .evendar-input.evendar-maximized-events .evendar-calendars {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 0px !important;
+          flex: 0 0 0px !important;
+  display: none !important;
+}
+
+.evendar-container .evendar-input.evendar-maximized-events .evendar-eventlist, .evendar-container-mobile .evendar-input.evendar-maximized-events .evendar-eventlist {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 1 100% !important;
+          flex: 1 1 100% !important;
+  border-top: none !important;
+}
+
+.evendar-container .evendar-input.evendar-maximized-calendar .evendar-eventlist, .evendar-container-mobile .evendar-input.evendar-maximized-calendar .evendar-eventlist {
+  display: none;
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 0px !important;
+          flex: 0 0 0px !important;
+}
+
+.evendar-container .evendar-input.evendar-maximized-calendar .evendar-calendars, .evendar-container-mobile .evendar-input.evendar-maximized-calendar .evendar-calendars {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 1 100% !important;
+          flex: 1 1 100% !important;
+}
+
+.evendar-container .evendar-input.evendar-event-description-open .evendar-input-content, .evendar-container-mobile .evendar-input.evendar-event-description-open .evendar-input-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.evendar-container .evendar-input.evendar-event-description-open .evendar-eventlist-header, .evendar-container-mobile .evendar-input.evendar-event-description-open .evendar-eventlist-header {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.evendar-container .evendar-input.evendar-event-description-open .evendar-eventlist-header .evendar-eventlist-type-selector, .evendar-container .evendar-input.evendar-event-description-open .evendar-eventlist-header .evendar-eventlist-panel-tools, .evendar-container-mobile .evendar-input.evendar-event-description-open .evendar-eventlist-header .evendar-eventlist-type-selector, .evendar-container-mobile .evendar-input.evendar-event-description-open .evendar-eventlist-header .evendar-eventlist-panel-tools {
+  display: none;
+}
+
+.evendar-container .evendar-input .evendar-eventlist-header, .evendar-container-mobile .evendar-input .evendar-eventlist-header {
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 13px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 4;
+  min-height: 31px;
+  overflow: hidden;
+  border-bottom: 1px solid #6bb796;
+  background: ghostwhite;
+  color: whitesmoke;
+  display: none;
+}
+
+.evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-header-title, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-header-title {
+  text-transform: capitalize;
+}
+
+.evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector, .evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools {
+  margin-top: 2px;
+  margin-right: -6px;
+}
+
+.evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector a, .evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools a, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector a, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools a {
+  font-size: 12px;
+  color: whitesmoke;
+  padding: 0;
+  margin: 0 8px 0 0;
+}
+
+.evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector a:hover, .evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools a:hover, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector a:hover, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools a:hover {
+  text-decoration: none;
+  color: black;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector a.active, .evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools a.active, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector a.active, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools a.active {
+  color: #A6AAB3;
+}
+
+.evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector a i, .evendar-container .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools a i, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-type-selector a i, .evendar-container-mobile .evendar-input .evendar-eventlist-header .evendar-eventlist-panel-tools a i {
+  font-size: 14px;
+}
+
+.evendar-container .evendar-input .evendar-input-content, .evendar-container-mobile .evendar-input .evendar-input-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  background: #6bb796;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector {
+  position: absolute;
+  display: none;
+  border: 0px solid #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  border-bottom: 1px solid #6bb796;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ms-month, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ms-month, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ms-month, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ms-month {
+  background: #6bb796;
+  height: 33.33%;
+  width: 25%;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  outline: 1px solid #6bb796;
+  text-transform: capitalize;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ms-month.current, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ms-month.current, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ms-month.current, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ms-month.current {
+  background: #A6AAB3;
+  color: white;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ms-month:hover, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ms-month:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ms-month:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ms-month:hover {
+  background: #c8e1ff;
+  cursor: pointer;
+  color: white;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-next, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-prev, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-next, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-prev, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-next, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-prev, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-next, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-prev {
+  margin: 0px;
+  background: #6bb796;
+  height: 33.33%;
+  width: 20%;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 1px solid #6bb796;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year.current, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-next.current, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-prev.current, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year.current, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-next.current, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-prev.current, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year.current, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-next.current, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-prev.current, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year.current, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-next.current, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-prev.current {
+  background: #A6AAB3;
+  color: white;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year:hover, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-next:hover, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-prev:hover, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year:hover, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-next:hover, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-prev:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-next:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-prev:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-next:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-prev:hover {
+  background: #c8e1ff;
+  cursor: pointer;
+  color: white;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-next, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-prev, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-next, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-prev, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-next, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-month-selector .evendar-ys-year-prev, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-next, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-year-selector .evendar-ys-year-prev {
+  font-size: 2.65em;
+  background: white;
+  color: #A6AAB3;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar {
+  float: left;
+  padding-bottom: 0px;
+  border-right: 1px solid #6bb796;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar:last-child, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar:last-child {
+  border-right: none;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title {
+  font-family:"Roboto";
+  font-size:20px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 25px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  color: darkgreen;
+  text-transform: capitalize;
+  border-bottom: 1px solid #6bb796;
+  padding: 6px 12px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-prev, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-next, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-prev, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-next {
+  font-size: 1em;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-prev i, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-next i, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-prev i, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-next i {
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-prev i:hover, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-next i:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-prev i:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-next i:hover {
+  text-shadow: 1px 2px 3px #eee;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-month-switch:hover,
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-year-switch:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-month-switch:hover,
+.evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-year-switch:hover {
+  color: light;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-prev, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-prev {
+  float: left;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title span .evendar-month-switch:hover, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title span .evendar-year-switch:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title span .evendar-month-switch:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title span .evendar-year-switch:hover {
+  color: #A6AAB3;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-next, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-title .evendar-next {
+  float: right;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container {
+  padding: 10px;
+  padding-bottom: 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-dayofweek, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-disabled, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-dayofweek, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-disabled {
+  width: calc(100% / 7);
+  float: left;
+  text-align: center;
+  padding: 2px;
+  font-size: .8em;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 1px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-dayofweek span, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day span, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-disabled span, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-dayofweek span, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day span, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-disabled span {
+  pointer-events: none;
+  display: block;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-disabled, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-disabled {
+  height: 30px;
+  max-height: 30px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-dayofweek, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-dayofweek {
+  text-transform: uppercase;
+  font-size: 0.65em;
+  font-weight: 600;
+  color: white;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day {
+  cursor: pointer;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-selected, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-start, .evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-end, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-selected, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-start, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-end {
+  background: mediumspringgreen;
+  color: darkgreen;
+  border-radius: 3px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-hovered:not(.evendar-selected), .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-hovered:not(.evendar-selected) {
+  background: #c8e1ff;
+  color: black;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-today, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-today {
+  background: darkgreen;
+  color: white;
+  font-weight: bold;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-today.evendar-hovered, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-today.evendar-hovered {
+  color: white;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-today.evendar-selected, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day.evendar-today.evendar-selected {
+  background: darkgreen;
+  color: white;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day:hover:not(.evendar-hovered):not(.evendar-selected), .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day:hover:not(.evendar-hovered):not(.evendar-selected) {
+  background: darkgreen;
+  border-radius: 3px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day .evendar-event-points-container, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day .evendar-event-points-container {
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: -3px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day .evendar-event-points-container .evendar-event-point, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-day .evendar-event-points-container .evendar-event-point {
+  border-radius: 2px;
+  margin: 1px 1px 1px 2px;
+  pointer-events: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline;
+  padding: 2px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-weekend, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-weekend {
+  color: darkgreen;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-hovered, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-hovered {
+  background: #c8e1ff;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-disabled, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar .evendar-days-container .evendar-disabled {
+  color: #6bb796;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar.no-border-right, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-calendars .evendar-calendar.no-border-right {
+  border-right: none;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist {
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  background: #6bb796;
+  z-index: 2;
+  border-top: 1px solid #6bb796;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 4px 8px;
+  border-radius: 4px;
+  background: ghostwhite;
+  border: 1px solid #6bb796;
+  -webkit-box-shadow: 0 1px 0 0 #ddd;
+          box-shadow: 0 1px 0 0 #ddd;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list:last-child, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list:last-child {
+  margin-bottom: 10px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list:hover {
+  background: #f1f1f9;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-image img, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-image img {
+  width: 100px;
+  height: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-left, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-left {
+  background: white;
+  border-right: 1px solid #6bb796;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-left p, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-left p {
+  margin: 0;
+  padding: 0;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-left p.evendar-eventlist-startdate, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-left p.evendar-eventlist-startdate {
+  font-weight: normal;
+  font-size: 0.7em;
+  text-align: center;
+  margin: 5px 5px 0px 5px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-left p.evendar-eventlist-enddate, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-left p.evendar-eventlist-enddate {
+  font-weight: normal;
+  font-size: 0.7em;
+  text-align: center;
+  padding-top: 2px;
+  border-top: 1px dotted #ccc;
+  margin: 0 5px 5px 5px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-right p, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-right p {
+  margin: 0;
+  padding: 0;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-right p.evendar-eventlist-name, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-right p.evendar-eventlist-name {
+  padding: 5px 20px 0 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-right p.evendar-eventlist-place, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-right p.evendar-eventlist-place {
+  font-size: 0.7em;
+  padding: 0 20px 5px 10px;
+  color: gray;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-right p.evendar-eventlist-excerpt, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list .evendar-eventlist-item-list-content div.evendar-eventlist-right p.evendar-eventlist-excerpt {
+  font-size: 0.8em;
+  padding: 0 20px 10px 10px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-bottom: 1px solid #E0EAF8;
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event .evendar-eventlist-hour, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event .evendar-eventlist-hour {
+  position: relative;
+  font-size: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+  margin: 5px 0;
+  padding: 3px 10px;
+  background: #6bb796;
+  -webkit-transform: translateY(75%);
+          transform: translateY(75%);
+  z-index: 2;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event .evendar-eventlist-content, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event .evendar-eventlist-content {
+  width: 100%;
+  border-top: 1px dotted #E0EAF8;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 33.34%;
+          flex: 0 33.34%;
+  position: relative;
+  border-right: 1px solid #EAF1FB;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column:first-child, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column:first-child {
+  border-left: 2px solid #EAF1FB;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column .evendar-eventlist-item, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column .evendar-eventlist-item {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  padding: 3px 6px;
+  overflow: hidden;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  border-width: 1px 1px 1px 6px;
+  border-style: solid;
+  border-color: #cccccc #cccccc #cccccc #74d3ae;
+  -o-border-image: initial;
+     border-image: initial;
+  color: black;
+  background: ghostwhite;
+  -webkit-box-shadow: #cccccc 0px 1px 0px 0px;
+          box-shadow: #cccccc 0px 1px 0px 0px;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column .evendar-eventlist-item:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column .evendar-eventlist-item:hover {
+  background: #f1f1f9;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column .evendar-eventlist-item.evendar-notopradius, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column .evendar-eventlist-item.evendar-notopradius {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 2px dotted #ddd;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column .evendar-eventlist-item.evendar-nobottomradius, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-container .evendar-eventlist-item-column .evendar-eventlist-item.evendar-nobottomradius {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 2px dotted #ddd;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event-now, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event-now {
+  height: 0px;
+  right: 3px;
+  background: transparent;
+  border-top: 1px dotted #A6AAB3;
+  position: absolute;
+  z-index: 3;
+  padding: 0;
+  margin: 0;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event-now .evendar-eventlist-event-now-ball, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-event-now .evendar-eventlist-event-now-ball {
+  border-radius: 4px;
+  background: #1783FF;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 2px 5px 1px 4px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  -webkit-transform: translateX(-100%) translateY(-70%);
+          transform: translateX(-100%) translateY(-70%);
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list.evendar-eventlist-item-selected, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list.evendar-eventlist-item-selected {
+  -webkit-box-shadow: 0px 2px 2px -1px #bbb;
+          box-shadow: 0px 2px 2px -1px #bbb;
+  background: #fffeee !important;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list.evendar-eventlist-item-selected:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item-list.evendar-eventlist-item-selected:hover {
+  background: #fffeee !important;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item.evendar-eventlist-item-selected, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item.evendar-eventlist-item-selected {
+  -webkit-box-shadow: 0px 2px 2px -1px #bbb;
+          box-shadow: 0px 2px 2px -1px #bbb;
+  background: #fffeee !important;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item.evendar-eventlist-item-selected:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-eventlist .evendar-eventlist-item.evendar-eventlist-item-selected:hover {
+  background: #fffeee !important;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 23;
+  background: #6bb796;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image {
+  position: relative;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image img, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image img {
+  width: 100%;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-close, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-close {
+  font-size: 2em;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: white;
+  background: black;
+  padding: 0 .3em;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-close:hover, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-close:hover {
+  cursor: pointer;
+  cursor: hand;
+  background: whitesmoke;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button div, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button div {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  margin: auto 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button a:hover ~ div, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button a:hover ~ div {
+  opacity: 1;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button button, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button button {
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  color: #fff;
+  background: darkgreen;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  line-height: 54px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  font-size: 2em;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button button:active, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-image .evendar-event-description-button button:active {
+  background: white;
+  color: black;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-place, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-place {
+  padding: 4px 10px;
+  color: whitesmoke;
+  font-size: 0.8em;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-date, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-date {
+  padding: 4px 10px;
+  color: whitesmoke;
+  font-size: 0.8em;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-content, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-content .evendar-event-description-title, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-content .evendar-event-description-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: .4em;
+  line-height: 1em;
+  color: whitesmoke;
+  display: inline-block;
+  position: relative;
+}
+
+.evendar-container .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-content .evendar-event-description-text, .evendar-container-mobile .evendar-input .evendar-input-content .evendar-event-description .evendar-event-description-content .evendar-event-description-text {
+  padding: .4em;
+}
+
+.evendar-container .evendar-input .evendar-footer, .evendar-container-mobile .evendar-input .evendar-footer {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px;
+  background: #6bb796;
+  border-top: 1px solid #6bb796;
+  z-index: 3;
+}
+
+@media screen and (orientation: landscape) {
+  .evendar-container .evendar-input .evendar-footer, .evendar-container-mobile .evendar-input .evendar-footer {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-top: auto;
+    display:none;
+  }
+}
+
+.evendar-container .evendar-input .evendar-footer button, .evendar-container-mobile .evendar-input .evendar-footer button {
+  font-size: 1em;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 4px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.evendar-container .evendar-input .evendar-footer button.evendar-apply, .evendar-container-mobile .evendar-input .evendar-footer button.evendar-apply {
+  background: #3291ff;
+  color: #fff;
+  font-weight: 500;
+  border: 1px solid #3291ff;
+  margin-left: 6px;
+  display: none !important;
+}
+
+.evendar-container .evendar-input .evendar-footer button.evendar-apply[disabled=disabled], .evendar-container .evendar-input .evendar-footer button.evendar-apply:disabled, .evendar-container-mobile .evendar-input .evendar-footer button.evendar-apply[disabled=disabled], .evendar-container-mobile .evendar-input .evendar-footer button.evendar-apply:disabled {
+  background: #c9c9d1;
+  color: #A6AAB3;
+  border: 1px solid #A6AAB3;
+}
+
+.evendar-container .evendar-input .evendar-footer button.evendar-apply:hover, .evendar-container-mobile .evendar-input .evendar-footer button.evendar-apply:hover {
+  background: #1983ff;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.evendar-container .evendar-input .evendar-footer button.evendar-cancel, .evendar-container-mobile .evendar-input .evendar-footer button.evendar-cancel {
+  display: none;
+  background: darkgreen;
+  color: darkgrey;
+  border: 1px solid whitesmoke;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.evendar-container .evendar-input .evendar-footer button.evendar-cancel:hover, .evendar-container-mobile .evendar-input .evendar-footer button.evendar-cancel:hover {
+  background: mediumseagreen;
+  color:black;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.evendar-container .evendar-input .evendar-footer button.evendar-cancel ~ .evendar-clear, .evendar-container-mobile .evendar-input .evendar-footer button.evendar-cancel ~ .evendar-clear {
+  margin-left: 6px;
+}
+
+.evendar-container .evendar-input .evendar-footer button.evendar-clear, .evendar-container-mobile .evendar-input .evendar-footer button.evendar-clear {
+  display: none;
+  background: ghostwhite;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.evendar-container .evendar-input .evendar-footer button.evendar-clear:hover, .evendar-container-mobile .evendar-input .evendar-footer button.evendar-clear:hover {
+  background: #dfdfff;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.evendar-popup {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+}
+
+.evendar-inline .evendar-clear {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.evendar-inline .evendar-cancel {
+  display: none;
+}
+
+.evendar-inline .evendar-apply {
+  display: none;
+}
+
+.evendar-inline .evendar-event-description-open .evendar-cancel, .evendar-inline .evendar-event-description-open .evendar-apply {
+  display: block;
+}
+
+.evendar-auto-select .evendar-footer .evendar-apply {
+  display: none;
+}
+
+.evendar-auto-select.evendar-event-description-open .evendar-footer .evendar-apply {
+  display: block !important;
+}
+
+.evendar-event-description-open .evendar-footer {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.evendar-event-description-open .evendar-footer button {
+  width: calc((100% - 6px) / 2) !important;
+}
+
+.evendar-event-description-open .evendar-footer button.evendar-clear {
+  display: none;
+}
+
+.evendar-event-description-open .evendar-footer button.evendar-apply, .evendar-event-description-open .evendar-footer button.evendar-cancel {
+  display: block !important;
+}
+
+.evendar-box-arrow-top {
+  pointer-events: none;
+  width: 22px;
+  height: 22px;
+  z-index: 12;
+  margin-left: 0;
+  position: absolute;
+  top: 0px;
+}
+
+.evendar-box-arrow-top:after, .evendar-box-arrow-top:before {
+  bottom: calc(100% - 6px);
+  left: 27px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.evendar-box-arrow-top:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: ghostwhite;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.evendar-box-arrow-top:before {
+  border-color: rgba(184, 184, 184, 0);
+  border-bottom-color: #ddd;
+  border-width: 11px;
+  margin-left: -11px;
+}
+
+.evendar-box-arrow-bottom {
+  width: 22px;
+  height: 22px;
+  z-index: 12;
+  margin-left: 0;
+  position: absolute;
+  bottom: 0px;
+  pointer-events: none;
+}
+
+.evendar-box-arrow-bottom:after, .evendar-box-arrow-bottom:before {
+  bottom: -15px;
+  left: 27px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.evendar-box-arrow-bottom:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: ghostwhite;
+  border-width: 11px;
+  margin-left: -11px;
+}
+
+.evendar-box-arrow-bottom:before {
+  border-color: rgba(184, 184, 184, 0);
+  border-top-color: #ddd;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.evendar-box-arrow-left {
+  width: 22px;
+  height: 22px;
+  z-index: 12;
+  margin-top: -11px;
+  position: absolute;
+  left: 0px;
+}
+
+.evendar-box-arrow-left:after, .evendar-box-arrow-left:before {
+  left: -15px;
+  top: 27px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.evendar-box-arrow-left:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #ffffff;
+  border-width: 11px;
+  margin-right: -11px;
+}
+
+.evendar-box-arrow-left:before {
+  border-color: rgba(184, 184, 184, 0);
+  border-right-color: #ddd;
+  border-width: 10px;
+  margin-right: -10px;
+}
+
+.evendar-box-arrow-right {
+  width: 22px;
+  height: 22px;
+  z-index: 12;
+  margin-top: -11px;
+  position: absolute;
+  right: 0px;
+}
+
+.evendar-box-arrow-right:after, .evendar-box-arrow-right:before {
+  right: -15px;
+  top: 27px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.evendar-box-arrow-right:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-left-color: #ffffff;
+  border-width: 11px;
+  margin-left: -11px;
+}
+
+.evendar-box-arrow-right:before {
+  border-color: rgba(184, 184, 184, 0);
+  border-left-color: #ddd;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.evendar-eventlist-excerpt, .evendar-eventlist-enddate {
+  display:none;
+}
+
+.evendar-input-content, .evendar-footer {
+  background: #6bb796;
+}
+
+.evendar-apply {
+  display: none !important;
+}
+
+@supports (-ms-ime-align:auto) {
+  .evendar-dayofweek, .evendar-day, .evendar-disabled  {
+      width: calc((100% / 7) - 2px) !important;
+      padding: 2px !important;
+      }
+  }
+
+/*# sourceMappingURL=evendar.css.map */

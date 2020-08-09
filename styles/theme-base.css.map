@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../SliderScss/scss/theme/themes/theme-boilerplate/theme-base.scss"
+    ],
+    "names": [],
+    "file": "theme-base.css"
+}

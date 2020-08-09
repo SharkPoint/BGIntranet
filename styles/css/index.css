@@ -1,0 +1,724 @@
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.ttf');
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham-Light.ttf');
+}
+
+@font-face {
+    font-family: 'ZapfDingbats';
+    src: url('../fonts/ZapfDingbats.ttf');
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('../fonts/Baskerville.ttf');
+}
+
+@font-face {
+    font-family: 'MinionPro-Regular';
+    src: url('../fonts/MinionPro-Regular.otf');
+}
+
+body {
+    background-color: #202020;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+input:focus::-webkit-input-placeholder {
+    color: #888;
+}
+
+.grid-stack {
+    background: #202020;
+    margin-bottom:40px;
+}
+
+.grid-stack-item-content {
+    color: #2c3e50;
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: 100%
+}
+
+.colorButtons {
+    position: absolute;
+    top: 5px;
+    left: 5px
+}
+
+.colPallette {
+    color: whitesmoke;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+
+.colPallette:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#MainNews {
+    background: url('../assets/images/MainNews.png') no-repeat center;
+    background-size: cover;
+}
+
+#MainNews .headline {
+    font-family: "Gotham-Bold";
+    font-size: 128pt;
+    color: #003c3c;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#MainNews .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 28pt;
+    color: #7cfaf6;
+    position: absolute;
+    bottom: 110px;
+    left: 340px;
+}
+
+#MainNews .subHeadline2 {
+    font-family: "Gotham-Light";
+    font-size: 28pt;
+    color: #ffffff;
+    position: absolute;
+    bottom: 65px;
+    left: 340px;
+}
+
+#Email {
+    background: url('../assets/images/EmailComplete.png') no-repeat center;
+    background-size: cover;
+}
+
+#OneDrive {
+    background: url('../assets/images/OneDriveComplete.png') no-repeat center;
+    background-size: cover;
+}
+
+#NoticeBoard {
+    background: url('../assets/images/NoticeBoard.png') no-repeat center;
+    background-size: cover;
+}
+
+#EmailContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+#Email .subHeadline2 {
+    font-family: "Gotham-Light";
+    font-size: 29pt;
+    color: #ffffff;
+    line-height: 25px;
+}
+
+#Email .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 29pt;
+    color: #ffffff;
+}
+
+#NoticeBoardContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+#NoticeBoard .subHeadline2 {
+    font-family: "Gotham-Light";
+    font-size: 29pt;
+    color: #ffffff;
+    line-height: 25px;
+}
+
+#NoticeBoard .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 29pt;
+    color: #ffffff;
+}
+
+#OneDriveContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+#OneDrive .subHeadline2
+{
+    font-family: "Gotham-Light";
+    font-size: 29pt;
+    color: #ffffff;
+    line-height: 25px;
+}
+
+#OneDrive .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 29pt;
+    color: #ffffff;
+}
+
+#Synergist {
+    background: url('../assets/images/SynergistComplete.png') no-repeat center;
+    background-size: cover;
+}
+
+
+#SynergistContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+}
+
+#Synergist .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 15pt;
+    color: #ffffff;
+    line-height:1.6;
+}
+
+#Synergist .lineOne {
+    font-family: "Gotham-Light";
+    font-size: 18pt;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+#Synergist .lineTwo {
+    font-family: "Gotham-Light";
+    font-size: 18pt;
+    color: #ffffff;
+}
+
+#LoveMyIdea {
+    background: url('../assets/images/LoveMyIdeaComplete.png') no-repeat center;
+    background-size: cover;
+}
+
+#LoveMyIdea:hover,
+#Spotlight:hover,
+#Email:hover,
+#OneDrive:hover,
+#NoticeBoard:hover,
+#FAQ:hover,
+#FindPeople:hover,
+#WhatsHappening:hover,
+#PeopleHR:hover,
+#IceAwards:hover,
+#MeetUpCall:hover,
+#CorporateTraveller:hover {
+    cursor: pointer;
+    border: 1px solid yellow;
+}
+
+#Synergist:hover {
+    cursor: pointer;
+    border: 1px solid lightskyblue;
+}
+
+#IceAwards {
+    background: url('../assets/images/IceAwardsComplete.png') no-repeat center;
+    background-size: cover;
+}
+
+#MeetUpCall {
+    background: url('../assets/images/MeetUpCallComplete.png') no-repeat center;
+    background-size: cover;
+}
+
+#CorporateTraveller {
+    background: url('../assets/images/CorporateTravellerComplete.png') no-repeat center;
+    background-size: cover;
+}
+
+#LoveMyIdeaContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+
+#LoveMyIdea .subHeadline2 { 
+    font-family: "Gotham-Light";
+    font-size: 20pt;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+#LoveMyIdea .subHeadline {
+
+    font-family: "Gotham-Bold";
+    font-size: 23pt;
+    color: #ffffff;
+    
+}
+
+#IceAwardsContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+
+#IceAwards .subHeadline2 { 
+    font-family: "Gotham-Light";
+    font-size: 20pt;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+#IceAwards .subHeadline {
+
+    font-family: "Gotham-Bold";
+    font-size: 23pt;
+    color: #ffffff;
+    
+}
+
+#CorporateTravellerContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+
+#CorporateTraveller .subHeadline2 { 
+    font-family: "Gotham-Light";
+    font-size: 15pt;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+#CorporateTraveller .subHeadline {
+
+    font-family: "Gotham-Bold";
+    font-size: 23pt;
+    color: #ffffff;
+    
+}
+
+#MeetUpCallContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+
+#MeetUpCall .subHeadline2 { 
+    font-family: "Gotham-Light";
+    font-size: 15pt;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+#MeetUpCall .subHeadline {
+
+    font-family: "Gotham-Bold";
+    font-size: 23pt;
+    color: #ffffff;
+    
+}
+
+
+#FindPeople {
+    background: url('../assets/images/PeopleFinderComplete.png');
+    background-size: cover;
+}
+
+#FindPeople .subHeadline2 {
+    font-family: "Gotham-Light";
+    font-size: 26pt;
+    color: #ffffff;
+    position: absolute;
+    top: 170px;
+    left: 25px;
+}
+
+#FindPeople .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 26pt;
+    color: #ffffff;
+    position: absolute;
+    top: 215px;
+    left: 25px;
+}
+
+#SeachFields {
+    position: absolute;
+    left: 20px;
+    margin: 0;
+    height: 40px;
+    bottom:180px;
+
+}
+
+#SeachFields input {
+    width:82%;
+    font-family: "Gotham-Book";
+    color: #888;
+    /* font-size: 15pt; */
+    padding: 5px;
+    margin-top:10px
+}
+
+#SeachFields button {
+    font-family: "Gotham-Book";
+    float: right;
+    margin: 10px 25px 0 0;
+    background:#29827f;
+    position: relative;
+    border-radius: 10px;
+	border: 0;
+	padding: 5px 25px;
+	color: white;
+}
+
+#SeachFields button:hover {
+    color:lightgrey;
+}
+
+
+#FAQ {
+    background: url('../assets/images/FaqComplete.png');
+    background-size: cover;
+}
+
+#FaqContent {
+    width:100%;
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;    
+}
+
+#FAQ .subHeadline2 {
+    font-family: "Gotham-Light";
+    font-size: 15pt;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+#FAQ .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 15pt;
+    color: #ffffff;
+}
+
+#PeopleHR {
+    background: url('../assets/images/PeopleHRComplete.png');
+    background-size: cover;
+}
+
+#PeopleHR a {
+    text-decoration: none;
+    color: white;
+}
+
+#PeopleHR a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#PeopleHR .subHeadline2 {
+    font-family: "Gotham-Light";
+    font-size: 22pt;
+    color: #ffffff;
+    position: absolute;
+    top: 45px;
+    left: 20px;
+}
+
+#PeopleHR .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 22pt;
+    color: #ffffff;
+    position: absolute;
+    top: 75px;
+    left: 20px;
+}
+
+#PeopleHR #peopleHRLinks {
+
+    font-family: "Gotham-Book";
+    font-size: 12pt;
+    color: #ffffff;
+    position: absolute;
+    top: 150px;
+    left: 5px;
+    text-align: left;
+    list-style: none;
+}
+
+#PeopleHR #peopleHRLinks li {
+    text-indent: -1em;
+}
+
+#PeopleHR #peopleHRLinks li:before {
+    color: blue;
+    content: "+";
+    padding-right: 5px;
+}
+
+#WhatsHappening {
+    background: url('../assets/images/WhatsHappeningComplete.png');
+    background-size: cover;
+}
+
+#WhatsHappening .subHeadline2 {
+    font-family: "Gotham-Light";
+    font-size: 27pt;
+    color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+#WhatsHappening .subHeadline {
+    font-family: "Gotham-Bold";
+    font-size: 27pt;
+    color: #ffffff;
+    position: absolute;
+    top: 95px;
+    left: 20px;
+}
+
+#WhatsHappening .subHeadline3 {
+    font-family: "Gotham-Light";
+    font-size: 24pt;
+    color: #ffffff;
+    position: absolute;
+    top: 165px;
+    left: 20px;
+}
+
+#Spotlight {
+    background: rgb(151, 0, 33);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+#Spotlight .ProfileDetails {
+    padding: 5px;
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0)
+}
+
+#Spotlight #profileRing {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0)
+}
+
+#Spotlight #profilePic {
+    position: absolute;
+    width:140px;
+    height:140px;
+    opacity:0.6;
+    top: 63px;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    border-radius:50%;
+}
+
+#spotlightName {
+    font-family: "Gotham-Bold";
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 0;
+    color: #f8a7b9
+}
+
+#spotlightJobDescription {
+    font-family: "Gotham-Book";
+    font-size: 13pt;
+    margin: 0;
+}
+
+#spotlightEmail,
+#spotlightPhone {
+    color: #f8a7b9;
+    font-family: "Gotham-Book";
+    font-size: 13pt;
+    margin: 0;
+}
+
+#ProfileBackground {
+    background: rgb(151, 0, 33);
+    background-attachment: fixed;
+    background-position: left 100px top -300px;
+    width: 180%;
+    height: 180%;
+    object-fit: fit;
+    opacity: 0.3
+}
+
+.navbar{
+    font-family: "Gotham-Bold";
+    margin-bottom:45px;                   
+}
+
+#navbarSupportedContent {
+    padding-right: 7px;
+}
+
+.nav-item {            
+    padding-top:25px;
+    height:75px;
+    font-size: 50pt;
+    background: rgba(222,222,222,0.2);
+    border-right: 1px solid black;
+   
+}
+
+.flex-column {
+    background:white;
+}
+
+.gridIcon {
+    color: rgb(204, 199, 199);
+    padding: 0 5px;
+    opacity: 0.5;
+}
+
+.gridIcon:hover {
+    transform: scale(1.2);
+    color: whitesmoke;
+    opacity:1;
+}
+
+#mm_list li a{
+    color: inherit; 
+}
+
+input::-webkit-input-placeholder {
+    text-align: left;
+    font-family: "Gotham-Book";
+    font-size: 16px;
+    color: #888;
+  }
+  
+  input:-moz-placeholder { 
+    color: #888;
+  }
+  
+  input::-ms-input-placeholder  { 
+    color: #888;
+  }
+
+  input:focus, textarea {
+    outline: none !important;
+}
+
+.select-wrapper input.select-dropdown {
+
+    margin-left: 10%;
+    margin-top: 0;
+    padding-top: 0;
+    width:90%;
+    display: inline-block;
+    vertical-align: top;    
+  }
+
+  input, select{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+.select2-container .select2-choice {
+
+    font-family: "Gotham-Book";
+    font-size: 16pt;
+    height: 100%;
+    border: 0px;
+    padding:0px;
+}
+
+#s2id_searchName {
+    font-family: "Gotham-Book";
+    font-size: 16pt;
+    box-sizing: border-box;
+    width: 269px;    
+    height: 100%;
+    border: 0px;
+}
+
+.select2-chosen .PersonSelected #select2-chosen-1 {
+    font-family: "Gotham-Book";
+    font-size: 16pt;
+    padding-top: 0px;
+    padding-left: 0px;
+    height: 40px;
+}
+
+    /* People Picker */
+    #select2-chosen-1{
+    text-align:left;
+    padding-top:7px;
+    padding-left:8px;
+    }
+
+.select2-container .select2-choice {
+    font-family: "Gotham-Book";
+    font-size: 16px;
+    border-radius: 0px;
+}
+
+.hidden {
+    height:0px;
+       -webkit-transition:height, 0.5s linear;
+    -moz-transition: height, 0.5s linear;
+    -ms-transition: height, 0.5s linear;
+    -o-transition: height, 0.5s linear;
+    transition: height, 0.5s linear;
+}
+    .hidden.open {
+        height:400px;
+     -webkit-transition:height, 0.5s linear;
+    -moz-transition: height, 0.5s linear;
+    -ms-transition: height, 0.5s linear;
+    -o-transition: height, 0.5s linear;
+    transition: height, 0.5s linear;
+    }
